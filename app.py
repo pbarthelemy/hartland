@@ -16,7 +16,7 @@ def receive_message():
         that confirms all requests that your bot receives came from Facebook.""" 
         print(request.args.get("hub.verify_token"))
         print(VERIFY_TOKEN)
-        print request.args
+        print(request.args)
         token_sent = request.args.get("hub.verify_token")
         return verify_fb_token(token_sent)
     #if the request was not get, it must be POST and we can just proceed with sending a message back to user
